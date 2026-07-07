@@ -1,0 +1,17 @@
+Act as a Machine Learning and Cybersecurity expert.
+Your task is to write a Python script to classify IoT network traffic (detecting cyberattacks such as various DDoS, DoS, Recon techniques, and BenignTraffic).
+
+You must strictly use the following code snippet to load the dataset:
+
+import kagglehub
+# Download latest version
+path = kagglehub.dataset_download("subhajournal/iotintrusion")
+print("Path to dataset files:", path)
+
+Requirements for the script:
+1. Automatically locate the downloaded CSV file within the `path` directory.
+2. Perform basic data cleaning by dropping NaN values.
+3. Encode categorical features efficiently using LabelEncoder (do not use get_dummies to prevent memory overload due to the large dataset size).
+4. Split the data into train and test sets.
+5. Train a machine learning model. Choose an algorithm suited for large tabular classification tasks (e.g., a Neural Network or an advanced ensemble method).
+6. Output the evaluation metrics: Accuracy and classification_report.
